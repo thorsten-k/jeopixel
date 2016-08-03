@@ -1,13 +1,8 @@
 package de.kisner.jeopixel;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-
 import org.apache.commons.configuration.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.offbytwo.jenkins.JenkinsServer;
 
 import net.sf.exlp.exception.ExlpConfigurationException;
 import net.sf.exlp.util.config.ConfigLoader;
