@@ -5,7 +5,7 @@
 	
 	<groupId>de.kisner</groupId>
 	<artifactId>jeopixel</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>jeopixel</name>
 	<packaging>jar</packaging>
     
