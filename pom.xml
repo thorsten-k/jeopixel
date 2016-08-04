@@ -280,4 +280,6 @@
 			</build>
    		</profile>
 	</profiles>
+	<url>https://github.com/thorsten-k/jeopixel</url>
+	<description>Java JNA Bindings for NeoPixel</description>
 </project>
