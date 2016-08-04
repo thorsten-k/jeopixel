@@ -47,6 +47,7 @@
 		</developer>
 	</developers>
 
+<!-- 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -58,7 +59,8 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
+--> 
+ 
 	<dependencies>
 	
 		<dependency>
@@ -69,11 +71,11 @@
 		</dependency>
 	
 		<!-- Utils -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>net.sf.exlp</groupId>
 			<artifactId>exlp-util</artifactId>
 		</dependency>
-		<dependency>
+ -->		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
 			<artifactId>jaxb-runtime</artifactId>
 			<version>2.2.11</version>
@@ -83,18 +85,22 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
+			<version>1.7.21</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.21</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.7.21</version>
 		</dependency>
 
 	</dependencies>
@@ -165,27 +171,6 @@
         		</executions>
 			</plugin>
 			<plugin>
-				<groupId>net.sf.exlp</groupId>
-				<artifactId>exlp-maven</artifactId>
-				<version>0.1.11-SNAPSHOT</version>
-				<executions>
-					<execution>
-						<id>create-view-identifier</id>
-						<phase>process-resources</phase> 
-						<goals>
-							<goal>mvnVersionIgnore</goal>
-						</goals>
-						<configuration>
-	              			<log>WARN</log>
-	              			<files>
-							  <param>exlp/maven/exlp-versions.xml</param>
-							</files>
-							<saveTo>${basedir}/src/main/resources/jeopixel/config/maven-versions.xml</saveTo>
-	              		</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
 		        <groupId>org.codehaus.mojo</groupId>
 		        <artifactId>versions-maven-plugin</artifactId>
 		        <version>2.2</version>
@@ -209,11 +194,6 @@
 			<releases><enabled>false</enabled></releases>
 			<snapshots><enabled>true</enabled></snapshots>
 		</repository>
-		<repository>
-			<id>sonatype</id>
-			<name>Sonatype OSS Snapshots Repository</name>
-			<url>http://oss.sonatype.org/content/groups/public</url>
-		</repository> <!-- For old snapshots, please use groupId `com.jnaerator` and the following repo -->
 		<repository>
 			<id>nativelibs4java-repo</id>
 			<url>http://nativelibs4java.sourceforge.net/maven</url>

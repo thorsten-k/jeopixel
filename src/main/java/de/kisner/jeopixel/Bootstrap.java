@@ -1,13 +1,7 @@
 package de.kisner.jeopixel;
 
-import org.apache.commons.configuration.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import net.sf.exlp.exception.ExlpConfigurationException;
-import net.sf.exlp.util.config.ConfigLoader;
-import net.sf.exlp.util.io.ExlpCentralConfigPointer;
-import net.sf.exlp.util.io.LoggerInit;
 
 public class Bootstrap
 {
@@ -15,14 +9,14 @@ public class Bootstrap
 
 	public final static String xmlConfig = "jeopixel/config/jbenkins.xml";
 	
-	private static Configuration config;
+//	private static Configuration config;
 	
-	public static Configuration init()
+//	public static Configuration init()
 	{
-		return init(xmlConfig);
+//		return init(xmlConfig);
 	}
 	
-	public static Configuration init(String configFile)
+/*	public static Configuration init(String configFile)
 	{
 		LoggerInit loggerInit = new LoggerInit("log4j.xml");
 		loggerInit.addAltPath("jeopixel/config");
@@ -41,4 +35,5 @@ public class Bootstrap
 
 		return config;
 	}
+	*/
 }
