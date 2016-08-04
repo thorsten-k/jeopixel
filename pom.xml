@@ -5,9 +5,11 @@
 	
 	<groupId>de.kisner</groupId>
 	<artifactId>jeopixel</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>jeopixel</name>
 	<packaging>jar</packaging>
+	<url>https://github.com/thorsten-k/jeopixel</url>
+	<description>Java JNA Bindings for NeoPixel</description>
     
     <properties>
     	<my.build.directory>target</my.build.directory>
@@ -41,19 +43,19 @@
 		</developer>
 	</developers>
 
-<!-- 
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>net.sf.exlp</groupId>
     			<artifactId>exlp-bom</artifactId>
-    			<version>0.1.11-SNAPSHOT</version>
+    			<version>0.1.11</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
---> 
+
  
 	<dependencies>
 	
@@ -65,11 +67,11 @@
 		</dependency>
 	
 		<!-- Utils -->
-<!-- 		<dependency>
+		<dependency>
 			<groupId>net.sf.exlp</groupId>
 			<artifactId>exlp-util</artifactId>
 		</dependency>
- -->		<dependency>
+		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
 			<artifactId>jaxb-runtime</artifactId>
 			<version>2.2.11</version>
@@ -189,8 +191,6 @@
 					<autoReleaseAfterClose>false</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
-			
-			
 		</plugins>
 	</build>
 
@@ -280,6 +280,4 @@
 			</build>
    		</profile>
 	</profiles>
-	<url>https://github.com/thorsten-k/jeopixel</url>
-	<description>Java JNA Bindings for NeoPixel</description>
 </project>
