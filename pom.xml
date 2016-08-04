@@ -60,6 +60,14 @@
 	</dependencyManagement>
 
 	<dependencies>
+	
+		<dependency>
+			<groupId>com.nativelibs4java</groupId>
+			<artifactId>jnaerator-runtime</artifactId>
+			<version>0.12</version>
+			<scope>compile</scope>
+		</dependency>
+	
 		<!-- Utils -->
 		<dependency>
 			<groupId>net.sf.exlp</groupId>
@@ -184,7 +192,12 @@
 		        <configuration>
 					<rulesUri>file://${project.basedir}/src/main/resources/jeopixel/config/maven-versions.xml</rulesUri>
 		        </configuration>
-		      </plugin>
+			</plugin>
+			<plugin>
+				<groupId>com.nativelibs4java</groupId>
+				<artifactId>maven-jnaerator-plugin</artifactId>
+				<version>0.12</version>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -196,7 +209,28 @@
 			<releases><enabled>false</enabled></releases>
 			<snapshots><enabled>true</enabled></snapshots>
 		</repository>
+		<repository>
+			<id>sonatype</id>
+			<name>Sonatype OSS Snapshots Repository</name>
+			<url>http://oss.sonatype.org/content/groups/public</url>
+		</repository> <!-- For old snapshots, please use groupId `com.jnaerator` and the following repo -->
+		<repository>
+			<id>nativelibs4java-repo</id>
+			<url>http://nativelibs4java.sourceforge.net/maven</url>
+		</repository>
 	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>sonatype</id>
+			<name>Sonatype OSS Snapshots Repository</name>
+			<url>http://oss.sonatype.org/content/groups/public</url>
+		</pluginRepository> <!-- For old snapshots, please use groupId `com.jnaerator` and the following repo -->
+		<pluginRepository>
+			<id>nativelibs4java-repo</id>
+			<url>http://nativelibs4java.sourceforge.net/maven</url>
+		</pluginRepository>
+	</pluginRepositories>
+	
 	
 	<profiles>
     	<profile>
